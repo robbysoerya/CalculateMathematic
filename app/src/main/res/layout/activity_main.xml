@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    android:background="#ffffff">
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:text="@string/perhitungan_anuitas"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/spinnerAnuitas" />
+
+    <Spinner
+        android:id="@+id/spinnerAnuitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/anuitasItems"
+        app:layout_constraintBottom_toBottomOf="@id/txtHeader"
+        app:layout_constraintBottom_toTopOf="@id/rdgNilai"/>
+
+    <RadioGroup
+        android:padding="8dp"
+        android:id="@+id/rdgNilai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/spinnerAnuitas"
+        app:layout_constraintBottom_toTopOf="@id/edtP">
+
+        <RadioButton
+            android:id="@+id/rdA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sekarang"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rdB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/akan_datang"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valuep"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@id/txtHeader"
+        app:layout_constraintBottom_toTopOf="@+id/edtI" />
+
+    <EditText
+        android:id="@+id/edtI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valuei"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@id/edtP"
+        app:layout_constraintBottom_toTopOf="@id/edtN" />
+
+    <EditText
+        android:id="@+id/edtN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valuen"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@id/edtI"
+        app:layout_constraintBottom_toTopOf="@id/edtPV"/>
+
+    <EditText
+        android:id="@+id/edtPV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valuepv"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@id/edtN"
+        app:layout_constraintBottom_toTopOf="@id/btnProcess" />
+
+    <Button
+        android:id="@+id/btnProcess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hitung"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        app:layout_constraintBottom_toBottomOf="@id/edtN"
+        app:layout_constraintBottom_toTopOf="@id/txtResult" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/btnProcess" />
+
+
+</android.support.constraint.ConstraintLayout>

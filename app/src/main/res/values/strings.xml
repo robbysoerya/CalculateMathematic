@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Anuitas</string>
+    <string name="perhitungan_anuitas">Perhitungan Anuitas</string>
+    <string name="sekarang">Sekarang</string>
+    <string name="akan_datang">Akan Datang</string>
+    <string name="valuep">Masukkan Nilai P</string>
+    <string name="valuei">Masukkan Nilai i</string>
+    <string name="valuen">Masukkan Nilai n</string>
+    <string name="valuepv">Masukkan Nilai PV</string>
+    <string name="hitung">Hitung</string>
+</resources>

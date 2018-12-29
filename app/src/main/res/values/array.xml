@@ -1,0 +1,10 @@
+<resources>
+    <string-array name="anuitasItems">
+        <item>Anuitas Biasa</item>
+        <item>Anuitas Dimuka</item>
+    </string-array>
+    <string-array name="nilaiItems">
+        <item>Nilai Sekarang</item>
+        <item>Nilai Akan Datang</item>
+    </string-array>
+</resources>
