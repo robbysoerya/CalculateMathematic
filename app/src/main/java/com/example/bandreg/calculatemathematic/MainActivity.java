@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             valuen = Integer.parseInt(currentN);
             double percentageI = (valuei / 100);
             double percentageN = valuen;
-            formula = ((valuep * ((Math.pow((1 + percentageI), percentageN) - 1) / percentageI)) * (1+percentageI));
+            formula = (valuep * ((Math.pow((1 + percentageI), percentageN) - 1) / percentageI)) * (1 + percentageI);
             result = parseCurrency(formula);
         } else if (currentN.equals("") || currentN.equals("0")) {
             valuep = parseDouble(currentP);
@@ -154,8 +154,9 @@ public class MainActivity extends AppCompatActivity {
             valuen = Integer.parseInt(currentN);
             double percentageI = (valuei / 100);
             double percentageN = valuen;
-            formula = (valuep * (1 - Math.pow((1 + percentageI), -(percentageN - 1))) / percentageI) + 1;
+            formula = valuep * (((1 - Math.pow((1 + percentageI), (-percentageN + 1))) / percentageI) + 1);
             result = parseCurrency(formula);
+            Log.d("Data ",percentageI + "");
         } else if (currentN.equals("") || currentN.equals("0")) {
             valuep = parseDouble(currentP);
             valuei = parseDouble(currentI);
@@ -183,7 +184,8 @@ public class MainActivity extends AppCompatActivity {
             valuei = parseDouble(currentI);
             valuen = Integer.parseInt(currentN);
             double percentageI = (valuei / 100);
-            formula = (valuep * Math.pow((1 + percentageI), valuen) - 1) / percentageI;
+            double percentageN = valuen;
+            formula = valuep * ((Math.pow((1 + percentageI), percentageN) - 1) / percentageI);
             result = parseCurrency(formula);
         } else if (currentN.equals("") || currentN.equals("0")) {
             valuep = parseDouble(currentP);
@@ -198,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
             valuend = parseDouble(currentN);
             double percentageI = (valuei / 100);
             double percentageN = (valuend);
-            formula = valuepv / (Math.pow((1 + percentageI), percentageN) - 1) / percentageI;
+            formula = valuepv / ((Math.pow((1 + percentageI), percentageN) - 1) / percentageI);
             result = parseCurrency(formula);
         }
 
